@@ -28,12 +28,6 @@ The language is designed to be simple, emphasizing clarity and ease of understan
 - The language only supports integer arithmetic.
 - Recursion and complex data types like arrays or objects are not supported.
 
-## Contributions
-Contributions are welcome! Please fork the repository and open a pull request with your suggested changes.
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Acknowledgements
 - Dr. Sharon Yalov-Handzel, for guidance and course materials.
 - Open-source projects that inspired the design and implementation of this interpreter.
