@@ -19,7 +19,7 @@ Enter expressions at the `calc>` prompt. To exit, use `Ctrl+C` or `Ctrl+D`.
 - Set a variable: `x = 5`
 - Add two numbers: `res = x + 2`
 - Conditional logic: `if x > 5 then y = 1 else y = 0`
-- Loop with a block: `while x < 10 do { x = x + 1; }`
+- Loop with a block: `while x < 10 do { x = x + 1; y = x * 2; }`
 
 ## Design Decisions
 The language is designed to be simple, emphasizing clarity and ease of understanding over advanced features. The interpreter is written in Python, chosen for its readability and extensive standard library.
