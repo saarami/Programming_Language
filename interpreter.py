@@ -16,10 +16,7 @@ class NodeVisitor:
         visitor = getattr(self, method_name, self.generic_visit)
         return visitor(node)
 
-    def visit_UnaryOp(self, node):
-        op_type = node.op.type
-        if op_type == MINUS:
-            return -self.visit(node.expr)  # Negate the result of the expression
+
     def generic_visit(self, node):
         raise Exception('No visit_{} method'.format(type(node).__name__))
 
