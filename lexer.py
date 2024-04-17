@@ -13,14 +13,6 @@ class Token:
         self.type = type_
         self.value = value
 
-    def __str__(self):
-        return f'Token({self.type}, {repr(self.value)})'
-
-    def __repr__(self):
-        return self.__str__()
-
-
-
 class Lexer:
     def __init__(self, text):
         self.text = text
@@ -134,7 +126,6 @@ class Lexer:
         return Token(EOF, None)
 
 
-
     def integer(self):
         """ Retrieve a full integer from the input (part of the lexer). """
         result = ''
@@ -142,6 +133,3 @@ class Lexer:
             result += self.current_char
             self.advance()
         return Token(INTEGER, int(result))  # Ensure that a Token object is returned
-
-
-
