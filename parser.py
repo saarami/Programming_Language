@@ -14,12 +14,12 @@ class While(AST):
 class IfThen(AST):
     def __init__(self, condition, true_stmt):
         self.condition = condition
-        self.true_stmt = true_stmt  # true_stmt is now a list of statements
+        self.true_stmt = true_stmt
 
 class IfThenElse(AST):
     def __init__(self, condition, true_stmt, false_stmt):
         self.condition = condition
-        self.true_stmt = true_stmt  # Both true_stmt and false_stmt are lists
+        self.true_stmt = true_stmt
         self.false_stmt = false_stmt
 
 
@@ -92,15 +92,6 @@ class Parser:
 
         return IfThen(condition, true_stmt)
 
-    def comparison(self):
-        node = self.term()  # Start with a base non-comparison expression
-
-        while self.current_token.type in (GREATER, LESS, EQUALS):
-            token = self.current_token
-            self.eat(token.type)  # Consume the comparison operator
-            node = BinOp(left=node, op=token, right=self.term())  # Form a comparison expression
-
-        return node
 
     def error(self, message=None):
         if message:
